@@ -54,6 +54,9 @@ $ git commit --amend -m "test2"
 add file to last commit:
 $ git commit --amend --no-edit
 
+untrack git file:
+git rm -rf --cached filename
+
 add ignore file:
 $ touch .gitignore	//.gitignore plase file's name that  you want to ignore
 
