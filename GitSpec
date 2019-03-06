@@ -74,7 +74,8 @@ $ git blame test.html
 $ git blame -L 5,10 test.html	//show 5~10 lines
 
 compare status currently with last commit:
-$ git diff			//=$ git diff HEAD
+$ git diff			//before add file
+$ git diff HEAD			//before commit file
 
 compare status currently with assign commit:
 $ git diff commit
