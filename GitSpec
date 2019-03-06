@@ -66,9 +66,24 @@ $ git clean -fX
 view file detailed commit:
 $ git log -p test.html
 
-view file simple commit:
+--------------------------------------------------------------------------------
+Git File History
+--------------------------------------------------------------------------------
+view file change:
 $ git blame test.html
 $ git blame -L 5,10 test.html	//show 5~10 lines
+
+compare status currently with last commit:
+$ git diff			//=$ git diff HEAD
+
+compare status currently with assign commit:
+$ git diff commit
+
+compare commit currently with assign commit:
+$ git diff --cached commit	//=$ git diff --staged commit
+
+compare with two commit:
+$ git diff commit1 commit2
 
 --------------------------------------------------------------------------------
 Git Reset File
