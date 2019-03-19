@@ -205,7 +205,7 @@ $ git rebase test	//HEAD -> original (HEAD isn't test)
 start interactive mode:
 git rebase -i cc797cd	//interactive mode include e12d8ef to cef6e40
 
-1.pick->reward
+1.pick->reword
 amend commit message
 
 2.pick->squash
