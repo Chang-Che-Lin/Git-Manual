@@ -175,6 +175,9 @@ delete branch:
 $ git branch -d test	//delete branch have merged
 $ git branch -D test	//delete branch not merged
 
+delete remote branch:
+$ git branch --delete --remote origin/master	//=$ git branch -dr origin/master
+
 merge branch:
 $ git merge test
 
