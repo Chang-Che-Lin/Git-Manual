@@ -52,7 +52,7 @@ $ git log --oneline	//simple
 $ git log --graph	//GUI interface
 
 give up all modify:
-$ git reset --hard @	//all file return to last commit status
+$git checkout .	//=$ git reset --hard @ ; all file return to last commit status
 
 give up part file modify:
 $ git checkout -- test.html	//part file return to last commit status
