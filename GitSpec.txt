@@ -55,7 +55,7 @@ give up all modify:
 $git checkout .	//=$ git reset --hard @ ; all file return to last commit status
 
 give up part file modify:
-$ git checkout -- test.html	//part file return to last commit status
+$ git checkout test.html	//part file return to last commit status
 
 remove file:
 $ git rm test.html
