@@ -1,4 +1,4 @@
-# Git Manual
+# Git-Manual
 
 ## Git Rule
 
@@ -555,7 +555,7 @@ git cherry-pick 6a498ec --no-commit   # Not merge to original branch
 ### add a point to remote
 
 ```bash
-git remote add origin https://github.com/Zhe-Lin/GitManual.git
+git remote add origin https://github.com/Zhe-Lin/Git-Manual.git
 ```
 
 ### push master to origin's master
@@ -616,11 +616,11 @@ git pull --rebase
 ### copy other remote file
 
 ```bash
-git clone https://github.com/Zhe-Lin/GitManual.git    #Download & place to the same directory
+git clone https://github.com/Zhe-Lin/Git-Manual.git    #Download & place to the same directory
 ```
 
 ```bash
-git clone https://github.com/Zhe-Lin/GitManual.git Test   #Download & place to Test directory
+git clone https://github.com/Zhe-Lin/Git-Manual.git Test   #Download & place to Test directory
 ```
 
 ## Git Patch
