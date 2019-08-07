@@ -41,6 +41,7 @@ cef6e40 update test
 cc797cd add test
 </code></pre><h3>replace file currently</h3><pre><code class="language-bash">git checkout test.html          # Replace file from Repository
 git checkout HEAD~2 test.html   # Replace file from Repository before 2 HEAD
+</code></pre><h3>unstage file</h3><pre><code class="language-bash">git reset   # File be placed to Working Directory from Staging Area
 </code></pre><h3>go to HEAD before 1 master</h3><pre><code class="language-bash">git reset HEAD^ --mixed   # File be placed to Working Directory
                           # = git reset HEAD^ = git reset @^
 git reset HEAD^ --soft    # File be placed to Staging Area
@@ -134,6 +135,8 @@ git push -f   #--force
 </code></pre><h3>download &amp; merge remote file don't generate commit</h3><pre><code class="language-bash">git pull --rebase
 </code></pre><h3>copy other remote file</h3><pre><code class="language-bash">git clone https://github.com/Zhe-Lin/Git-Manual.git    #Download &amp; place to the same directory
 </code></pre><pre><code class="language-bash">git clone https://github.com/Zhe-Lin/Git-Manual.git Test   #Download &amp; place to Test directory
+</code></pre><h2>Github Pages</h2><h3>bulid remote web page</h3><pre><code class="language-bash">git push -u origin master:gh-pages
+</code></pre><h3>delete remote web page</h3><pre><code class="language-bash">git push -u origin :gh-pages
 </code></pre><h2>Git Patch</h2><pre><code class="language-bash">git log --oneline
 
 e12d8ef (HEAD -&gt; master) update test3
