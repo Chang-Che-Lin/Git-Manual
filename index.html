@@ -158,4 +158,14 @@ git submodule update --remote --merge   # Update from remote,and merge commit to
 </code></pre><pre><code class="language-bash">git clone --recurse-submodules https://github.com/Zhe-Lin/Git-Manual.git    # Run step1 ~ step3
 </code></pre><h3>delete submodule</h3><ol><li>delete .git/config setting<ul><li>git submodule deinit test</li></ul></li><li>delete .gitmodules<ul><li>delete [submodule &quot;test&quot;] data</li></ul></li><li>untrack file<ul><li>git rm --cached test</li></ul></li><li>delete .git/modules/test<ul><li>rm -rf .git/modules/test</li></ul></li><li>delete test<ul><li>rm -rf test</li></ul></li><li>add &amp; commit<ul><li>git add --all</li><li>git commit -m &quot;-- test&quot; -m &quot;remove test submodule&quot;</li></ul></li></ol><h3>renew submodule url</h3><pre><code class="language-bash">git submodule sync            # Synchronizes all submodules
 git submodule sync -- test    # Synchronizes submodule only test
+</code></pre><h2>Git Subtree</h2><h3>add subtree to project</h3><pre><code class="language-bash">git subtree add --prefix=TestSubtree --squash https://github.com/Zhe-Lin/Git-Manual.git master
+# = git subtree add -P TestSubtree --squash https://github.com/Zhe-Lin/Git-Manual.git master
+# --prefix : Specify a directory ; --squash : merge all history commit to one commit
+</code></pre><h3>let url have nickname</h3><pre><code class="language-bash">git remote add test_subtree https://github.com/Zhe-Lin/Git-Manual.git
+</code></pre><h3>push git to subtree</h3><pre><code class="language-bash">git subtree push -P TestSubtree https://github.com/Zhe-Lin/Git-Manual.git master
+# = git subtree push -P TestSubtree test_subtree master
+</code></pre><h3>pull git from subtree</h3><pre><code class="language-bash">git subtree pull -P TestSubtree --squash https://github.com/Zhe-Lin/Git-Manual.git master
+# = git subtree pull -P TestSubtree --squash test_subtree master
+</code></pre><h3>reset push commit reference position</h3><pre><code class="language-bash">git subtree split --rejoin --prefix=a_project_subtree --ignore-joins
+# --rejoin : reload history commit ; --ignore-joins : don't reload history commit
 </code></pre></article><script>var testStrings='123abcABC,./繁體简体한글にっぽんご';var cjkCounter=0;var cjkMonoCounter=0;WebFont.load({custom:{families:['CJK:n4,n7']},testStrings:testStrings,fontactive:function(){if(++cjkCounter===2){$('.markdown-body').css('font-family','CJK');}}});WebFont.load({custom:{families:['CJK MONO:n4,n7']},testStrings:testStrings,fontactive:function(){if(++cjkMonoCounter===2){$('code').css('font-family','CJK MONO');}}});</script><script>$('code[class^=\'language-\']').each(function(i,block){var t=$(this);var c=t.attr('class');t.attr('class',c.replace(/language-/g,''));hljs.highlightBlock(block);});</script></body></html>
