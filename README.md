@@ -98,7 +98,7 @@ git rm test.html
 ### untracked file
 
 ```bash
-git rm test.html --cached
+git rm --cached test.html
 ```
 
 ### rename file
@@ -667,4 +667,67 @@ git format-patch -2 -o /tmp/patches   # Assign location to generate patch file
 
 ```bash
 git am /tmp/patches/*
+```
+
+## Git Submodule
+
+### add submodule to project
+
+```bash
+git submodule add https://github.com/Zhe-Lin/Git-Manual.git
+```
+
+### view submodule status
+
+```bash
+git submodule status
+```
+
+### update submodule
+
+```bash
+git submodule update                    # Update from local. If havn't local, update from remote
+git submodule update --remote           # Update from remote
+git submodule update --remote --merge   # Update from remote,and merge commit to master
+                                        # = git submodule update --remote --rebase
+```
+
+### clone submodule
+
+1. clone data
+   - git clone https://github.com/Zhe-Lin/Git-Manual.git
+2. init submodule
+   - git submodule init
+3. update submodule
+   - git submodule update --recursive
+
+```bash
+git submodule update --init --recursive   # Run step2 ~ step3
+```
+
+```bash
+git clone --recurse-submodules https://github.com/Zhe-Lin/Git-Manual.git    # Run step1 ~ step3
+```
+
+### delete submodule
+
+1. delete .git/config setting
+   - git submodule deinit test
+2. delete .gitmodules
+   - delete [submodule "test"] data
+3. untrack file
+   - git rm --cached test
+4. delete .git/modules/test
+   - rm -rf .git/modules/test
+5. delete test
+   - rm -rf test
+6. add & commit
+   - git add --all
+   - git commit -m "-- test" -m "remove test submodule"
+
+### renew submodule url
+
+```bash
+git submodule sync            # Synchronizes all submodules
+git submodule sync -- test    # Synchronizes submodule only test
 ```
