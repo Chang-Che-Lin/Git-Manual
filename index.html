@@ -16,7 +16,7 @@ git log --graph     # GUI interface
 </code></pre><h3>give up all modify</h3><pre><code class="language-bash">git checkout .    # = git reset --hard @ ; All file return to last commit status
 </code></pre><h3>give up part file modify</h3><pre><code class="language-bash">git checkout test.html    # Partial file return to last commit status
 </code></pre><h3>remove file</h3><pre><code class="language-bash">git rm test.html
-</code></pre><h3>untracked file</h3><pre><code class="language-bash">git rm test.html --cached
+</code></pre><h3>untracked file</h3><pre><code class="language-bash">git rm --cached test.html
 </code></pre><h3>rename file</h3><pre><code class="language-bash">git mv test1.html test2.html
 </code></pre><h3>modify last commit message</h3><pre><code class="language-bash">git commit --amend -m &quot;test2&quot;
 </code></pre><h3>add file to last commit</h3><pre><code class="language-bash">git commit --amend --no-edit
@@ -148,4 +148,14 @@ cc797cd add test
 </code></pre><h3>make last 2 commit patch file</h3><pre><code class="language-bash">git format-patch 657fce7..e12d8ef     # = git format-patch -2
 git format-patch -2 -o /tmp/patches   # Assign location to generate patch file
 </code></pre><h3>use patch file</h3><pre><code class="language-bash">git am /tmp/patches/*
+</code></pre><h2>Git Submodule</h2><h3>add submodule to project</h3><pre><code class="language-bash">git submodule add https://github.com/Zhe-Lin/Git-Manual.git
+</code></pre><h3>view submodule status</h3><pre><code class="language-bash">git submodule status
+</code></pre><h3>update submodule</h3><pre><code class="language-bash">git submodule update                    # Update from local. If havn't local, update from remote
+git submodule update --remote           # Update from remote
+git submodule update --remote --merge   # Update from remote,and merge commit to master
+                                        # = git submodule update --remote --rebase
+</code></pre><h3>clone submodule</h3><ol><li>clone data<ul><li>git clone <a href="https://github.com/Zhe-Lin/Git-Manual.git">https://github.com/Zhe-Lin/Git-Manual.git</a></li></ul></li><li>init submodule<ul><li>git submodule init</li></ul></li><li>update submodule<ul><li>git submodule update --recursive</li></ul></li></ol><pre><code class="language-bash">git submodule update --init --recursive   # Run step2 ~ step3
+</code></pre><pre><code class="language-bash">git clone --recurse-submodules https://github.com/Zhe-Lin/Git-Manual.git    # Run step1 ~ step3
+</code></pre><h3>delete submodule</h3><ol><li>delete .git/config setting<ul><li>git submodule deinit test</li></ul></li><li>delete .gitmodules<ul><li>delete [submodule &quot;test&quot;] data</li></ul></li><li>untrack file<ul><li>git rm --cached test</li></ul></li><li>delete .git/modules/test<ul><li>rm -rf .git/modules/test</li></ul></li><li>delete test<ul><li>rm -rf test</li></ul></li><li>add &amp; commit<ul><li>git add --all</li><li>git commit -m &quot;-- test&quot; -m &quot;remove test submodule&quot;</li></ul></li></ol><h3>renew submodule url</h3><pre><code class="language-bash">git submodule sync            # Synchronizes all submodules
+git submodule sync -- test    # Synchronizes submodule only test
 </code></pre></article><script>var testStrings='123abcABC,./繁體简体한글にっぽんご';var cjkCounter=0;var cjkMonoCounter=0;WebFont.load({custom:{families:['CJK:n4,n7']},testStrings:testStrings,fontactive:function(){if(++cjkCounter===2){$('.markdown-body').css('font-family','CJK');}}});WebFont.load({custom:{families:['CJK MONO:n4,n7']},testStrings:testStrings,fontactive:function(){if(++cjkMonoCounter===2){$('code').css('font-family','CJK MONO');}}});</script><script>$('code[class^=\'language-\']').each(function(i,block){var t=$(this);var c=t.attr('class');t.attr('class',c.replace(/language-/g,''));hljs.highlightBlock(block);});</script></body></html>
