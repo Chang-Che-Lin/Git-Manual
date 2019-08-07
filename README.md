@@ -634,13 +634,13 @@ git clone https://github.com/Zhe-Lin/Git-Manual.git Test   #Download & place to 
 ### bulid remote web page
 
 ```bash
-git push -u origin master:gh-pages
+git push origin master:gh-pages
 ```
 
 ### delete remote web page
 
 ```bash
-git push -u origin :gh-pages
+git push origin :gh-pages
 ```
 
 ## Git Patch
