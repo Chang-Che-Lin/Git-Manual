@@ -197,6 +197,12 @@ git checkout test.html          # Replace file from Repository
 git checkout HEAD~2 test.html   # Replace file from Repository before 2 HEAD
 ```
 
+### unstage file
+
+```bash
+git reset   # File be placed to Working Directory from Staging Area
+```
+
 ### go to HEAD before 1 master
 
 ```bash
