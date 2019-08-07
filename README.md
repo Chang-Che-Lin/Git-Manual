@@ -731,3 +731,40 @@ git clone --recurse-submodules https://github.com/Zhe-Lin/Git-Manual.git    # Ru
 git submodule sync            # Synchronizes all submodules
 git submodule sync -- test    # Synchronizes submodule only test
 ```
+
+## Git Subtree
+
+### add subtree to project
+
+```bash
+git subtree add --prefix=TestSubtree --squash https://github.com/Zhe-Lin/Git-Manual.git master
+# = git subtree add -P TestSubtree --squash https://github.com/Zhe-Lin/Git-Manual.git master
+# --prefix : Specify a directory ; --squash : merge all history commit to one commit
+```
+
+### let url have nickname
+
+```bash
+git remote add test_subtree https://github.com/Zhe-Lin/Git-Manual.git
+```
+
+### push git to subtree
+
+```bash
+git subtree push -P TestSubtree https://github.com/Zhe-Lin/Git-Manual.git master
+# = git subtree push -P TestSubtree test_subtree master
+```
+
+### pull git from subtree
+
+```bash
+git subtree pull -P TestSubtree --squash https://github.com/Zhe-Lin/Git-Manual.git master
+# = git subtree pull -P TestSubtree --squash test_subtree master
+```
+
+### reset push commit reference position
+
+```bash
+git subtree split --rejoin --prefix=a_project_subtree --ignore-joins
+# --rejoin : reload history commit ; --ignore-joins : don't reload history commit
+```
