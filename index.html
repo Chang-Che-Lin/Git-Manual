@@ -135,8 +135,8 @@ git push -f   #--force
 </code></pre><h3>download &amp; merge remote file don't generate commit</h3><pre><code class="language-bash">git pull --rebase
 </code></pre><h3>copy other remote file</h3><pre><code class="language-bash">git clone https://github.com/Zhe-Lin/Git-Manual.git    #Download &amp; place to the same directory
 </code></pre><pre><code class="language-bash">git clone https://github.com/Zhe-Lin/Git-Manual.git Test   #Download &amp; place to Test directory
-</code></pre><h2>Github Pages</h2><h3>bulid remote web page</h3><pre><code class="language-bash">git push -u origin master:gh-pages
-</code></pre><h3>delete remote web page</h3><pre><code class="language-bash">git push -u origin :gh-pages
+</code></pre><h2>Github Pages</h2><h3>bulid remote web page</h3><pre><code class="language-bash">git push origin master:gh-pages
+</code></pre><h3>delete remote web page</h3><pre><code class="language-bash">git push origin :gh-pages
 </code></pre><h2>Git Patch</h2><pre><code class="language-bash">git log --oneline
 
 e12d8ef (HEAD -&gt; master) update test3
