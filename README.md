@@ -629,6 +629,20 @@ git clone https://github.com/Zhe-Lin/Git-Manual.git    #Download & place to the 
 git clone https://github.com/Zhe-Lin/Git-Manual.git Test   #Download & place to Test directory
 ```
 
+## Github Pages
+
+### bulid remote web page
+
+```bash
+git push -u origin master:gh-pages
+```
+
+### delete remote web page
+
+```bash
+git push -u origin :gh-pages
+```
+
 ## Git Patch
 
 ```bash
