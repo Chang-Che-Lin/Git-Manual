@@ -7434,11 +7434,11 @@
             <li><a href="#git-submodule">Git Submodule</a></li>
             <li><a href="#git-subtree">Git Subtree</a></li>
         </ul>
-        <h2 id="git-rule">Git Rule</h2>
+        <h2>Git Rule</h2>
         <p>++: new file</p>
         <p>--: delete file</p>
         <p>+-: modify file</p>
-        <h2 id="git-initial-set">Git Initial Set</h2>
+        <h2>Git Initial Set</h2>
         <h3>user set</h3>
         <pre><code class="language-bash">git config --global user.name &quot;Zhe-Lin&quot;
 git config --global user.email &quot;s1023165@g.ncyu.edu.tw&quot;
@@ -7455,7 +7455,7 @@ git config --global user.email &quot;s1023165@g.ncyu.edu.tw&quot;
         <h3>initial git of directory</h3>
         <pre><code class="language-bash">git init
 </code></pre>
-        <h2 id="git-use-command">Git Use Command</h2>
+        <h2>Git Use Command</h2>
         <h3>view git status</h3>
         <pre><code class="language-bash">git status
 </code></pre>
@@ -7508,7 +7508,7 @@ git log --graph     # GUI interface
         <h3>view file detailed commit</h3>
         <pre><code class="language-bash">git log -p test.html
 </code></pre>
-        <h2 id="git-file-history">Git File History</h2>
+        <h2>Git File History</h2>
         <h3>view file change</h3>
         <pre><code class="language-bash">git blame test.html
 git blame -L 5,10 test.html   # Show 5~10 lines
@@ -7526,7 +7526,7 @@ git diff HEAD   # Before commit file
         <h3>compare with two commit</h3>
         <pre><code class="language-bash">git diff commit1 commit2
 </code></pre>
-        <h2 id="git-reset-file">Git Reset File</h2>
+        <h2>Git Reset File</h2>
         <pre><code class="language-bash">git log --oneline
 
 e12d8ef (HEAD -&gt; master) update test3
@@ -7564,7 +7564,7 @@ git reset 85e7e30     # 85e7e30 is HEAD number
         <pre><code class="language-bash">git reflog
 git log -g
 </code></pre>
-        <h2 id="git-find-data">Git Find Data</h2>
+        <h2>Git Find Data</h2>
         <h3>find auther</h3>
         <pre><code class="language-bash">git log --oneline --author=&quot;Leo&quot;
 </code></pre>
@@ -7580,7 +7580,7 @@ git log -g
         <h3>find commit since 9am to 12am after 2017-01</h3>
         <pre><code class="language-bash">git log --oneline --since=&quot;9am&quot; --until=&quot;12am&quot; --after=&quot;2017-01&quot;
 </code></pre>
-        <h2 id="git-branch">Git Branch</h2>
+        <h2>Git Branch</h2>
         <pre><code class="language-bash">git branch
 
 * master    # e12d8e
@@ -7631,7 +7631,7 @@ git branch -D test    # Delete branch not merged
         <pre><code class="language-bash">git reflog
 git log -g
 </code></pre>
-        <h2 id="git-rebase">Git Rebase</h2>
+        <h2>Git Rebase</h2>
         <pre><code class="language-bash">git log --oneline
 
 e12d8ef (HEAD -&gt; master) update test3
@@ -7710,11 +7710,11 @@ cc797cd add test
                 </ul>
             </li>
         </ol>
-        <h2 id="git-revert">Git Revert</h2>
+        <h2>Git Revert</h2>
         <h3>add a commit to cancel last commit</h3>
         <pre><code class="language-bash">git revert HEAD --no-edit
 </code></pre>
-        <h2 id="git-tag">Git Tag</h2>
+        <h2>Git Tag</h2>
         <pre><code class="language-bash">git log --oneline
 
 e12d8ef (HEAD -&gt; master) update test3
@@ -7736,7 +7736,7 @@ cc797cd add test
         <h3>delete tag</h3>
         <pre><code class="language-bash">git tag -d Test_Tag
 </code></pre>
-        <h2 id="git-stash">Git Stash</h2>
+        <h2>Git Stash</h2>
         <h3>save working program to stash</h3>
         <pre><code class="language-bash">git stash -u
 </code></pre>
@@ -7752,7 +7752,7 @@ cc797cd add test
         <h3>take &amp; delete stash</h3>
         <pre><code class="language-bash">git stash pop stash@{0}
 </code></pre>
-        <h2 id="git-filter-branch">Git Filter-Branch</h2>
+        <h2>Git Filter-Branch</h2>
         <h3>massive modify data in every commit</h3>
         <pre><code class="language-bash">git filter-branch --tree-filter &quot;rm -f test.html&quot;
 </code></pre>
@@ -7805,12 +7805,12 @@ cc797cd add test
                 </ul>
             </li>
         </ol>
-        <h2 id="git-cherry-pick">Git Cherry-Pick</h2>
+        <h2>Git Cherry-Pick</h2>
         <h3>take commit from other branch</h3>
         <pre><code class="language-bash">git cherry-pick 6a498ec               # Merge to original branch
 git cherry-pick 6a498ec --no-commit   # Not merge to original branch
 </code></pre>
-        <h2 id="git-remote">Git Remote</h2>
+        <h2>Git Remote</h2>
         <h3>add a point to remote</h3>
         <pre><code class="language-bash">git remote add origin https://github.com/Zhe-Lin/Git-Manual.git
 </code></pre>
@@ -7847,14 +7847,14 @@ git push -f   #--force
 </code></pre>
         <pre><code class="language-bash">git clone https://github.com/Zhe-Lin/Git-Manual.git Test   #Download &amp; place to Test directory
 </code></pre>
-        <h2 id="github-pages">Github Pages</h2>
+        <h2>Github Pages</h2>
         <h3>bulid remote web page</h3>
         <pre><code class="language-bash">git push origin master:gh-pages
 </code></pre>
         <h3>delete remote web page</h3>
         <pre><code class="language-bash">git push origin :gh-pages
 </code></pre>
-        <h2 id="git-patch">Git Patch</h2>
+        <h2>Git Patch</h2>
         <pre><code class="language-bash">git log --oneline
 
 e12d8ef (HEAD -&gt; master) update test3
@@ -7871,7 +7871,7 @@ git format-patch -2 -o /tmp/patches   # Assign location to generate patch file
         <h3>use patch file</h3>
         <pre><code class="language-bash">git am /tmp/patches/*
 </code></pre>
-        <h2 id="git-submodule">Git Submodule</h2>
+        <h2>Git Submodule</h2>
         <h3>add submodule to project</h3>
         <pre><code class="language-bash">git submodule add https://github.com/Zhe-Lin/Git-Manual.git
 </code></pre>
@@ -7937,7 +7937,7 @@ git submodule update --remote --merge   # Update from remote,and merge commit to
         <pre><code class="language-bash">git submodule sync            # Synchronizes all submodules
 git submodule sync -- test    # Synchronizes submodule only test
 </code></pre>
-        <h2 id="git-subtree">Git Subtree</h2>
+        <h2>Git Subtree</h2>
         <h3>add subtree to project</h3>
         <pre><code class="language-bash">git subtree add --prefix=TestSubtree --squash https://github.com/Zhe-Lin/Git-Manual.git master
 # = git subtree add -P TestSubtree --squash https://github.com/Zhe-Lin/Git-Manual.git master
