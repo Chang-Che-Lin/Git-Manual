@@ -245,6 +245,12 @@ git reset 85e7e30     # 85e7e30 is HEAD number
 git reset e12d8ef --hard
 ```
 
+### go back original status after merge,rebase,reset
+
+```bash
+git reset ORIG_HEAD --hard
+```
+
 ### view all log
 
 ```bash
@@ -364,12 +370,6 @@ git merge test
 
 ```bash
 git branch new_test b174a5a
-```
-
-### go back original branch after merge,rebase,reset
-
-```bash
-git reset ORIG_HEAD --hard
 ```
 
 ### view all branch
