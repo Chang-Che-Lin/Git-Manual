@@ -7897,13 +7897,17 @@ git submodule update --remote --merge   # Update from remote,and merge commit to
                 </ul>
             </li>
             <li>update submodule<ul>
-                    <li>git submodule update --recursive</li>
+                    <li>git submodule update --recursive (--recursive : update submodule &amp; submodule's submodule)
+                    </li>
                 </ul>
             </li>
         </ol>
         <pre><code class="language-bash">git submodule update --init --recursive   # Run step2 ~ step3
 </code></pre>
         <pre><code class="language-bash">git clone --recurse-submodules https://github.com/Zhe-Lin/Git-Manual.git    # Run step1 ~ step3
+</code></pre>
+        <h3>solve detached head</h3>
+        <pre><code class="language-bash">git submodule foreach -q --recursive 'git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)'
 </code></pre>
         <h3>delete submodule</h3>
         <ol>
