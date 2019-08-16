@@ -583,6 +583,12 @@ git cherry-pick 6a498ec --no-commit   # Not merge to original branch
 git remote add origin https://github.com/Zhe-Lin/Git-Manual.git
 ```
 
+### view remote branch
+
+```bash
+git remote -v
+```
+
 ### push master to origin's master
 
 ```bash
