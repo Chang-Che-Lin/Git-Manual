@@ -589,6 +589,12 @@ git remote add origin https://github.com/Zhe-Lin/Git-Manual.git
 git remote -v
 ```
 
+### reset remote branch
+
+```bash
+git remote set-url origin git@github.com:Zhe-Lin/Git-Manual.git
+```
+
 ### push master to origin's master
 
 ```bash
